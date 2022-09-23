@@ -1,0 +1,179 @@
+* {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+}
+
+:root {
+ --Moderate-violet: hsl(263, 55%, 52%);
+ --Very-dark-grayish-blue: hsl(217, 19%, 35%);
+ --Very-dark-blackish-blue: hsl(219, 29%, 14%);
+ --White: hsl(0, 0%, 100%);
+ --Light-gray: hsl(0, 0%, 81%);
+ --Light-grayish-blue: hsl(210, 46%, 95%);
+ --font-Barlow: 'Barlow Semi Condensed', sans-serif;
+}
+
+body {
+ width: 1440px;
+ height: 900px;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ font-size: 13px;
+ font-weight: 500;
+ font-family: var(--font-Barlow);
+ background-color: var(--Light-grayish-blue);
+
+}
+
+main {
+ width: 80%;
+ height: 70%;
+ display: grid;
+ grid-template-columns: repeat(4, 1fr);
+ grid-template-rows: repeat(2, 1fr);
+ grid-template-areas: 
+ 'box-daniel box-daniel box-jonathan box-kira'
+ 'box-jeanette box-patrick box-patrick box-kira';
+ gap: 25px;
+}
+
+.box-daniel {
+ grid-area: box-daniel;
+ background: var(--Moderate-violet) url(images/bg-pattern-quotation.svg) no-repeat;
+ background-position: 78% 0%;
+ background-size: 23%;
+ color: var(--White);
+ border-radius: 10px;
+ padding: 35px;
+}
+
+.box-jonathan {
+ grid-area: box-jonathan;
+ background-color: var(--Very-dark-grayish-blue);
+ color: var(--White);
+ border-radius: 10px;
+ padding: 35px;
+}
+
+.box-jeanette {
+ grid-area: box-jeanette;
+ background-color: var(--White);
+ color: var(--Very-dark-blackish-blue);
+ color: var(--Very-dark-blackish-blue);
+ border-radius: 10px;
+ padding: 35px;
+}
+
+.box-patrick {
+ grid-area: box-patrick;
+ background-color: var(--Very-dark-blackish-blue);
+ color: var(--White);
+ border-radius: 10px;
+ padding: 33px;
+}
+
+.box-kira {
+ grid-area: box-kira;
+ background-color: var(--White);
+ color: var(--Very-dark-blackish-blue);
+ border-radius: 10px;
+ padding: 35px;
+}
+
+.avatar {
+ display: flex;
+ align-items: center;
+ gap: 20px;
+ font-size: 9px;
+}
+
+.avatar h1 {
+ font-size: 12px;
+}
+
+.avatar p {
+ opacity: 50%;
+ font-size: 10px;
+}
+
+.img {
+ border-radius: 50%;
+ border: solid 2px white;
+ width: 40px;
+}
+
+.box-patrick img {
+ border-radius: 50%;
+ border: solid 2px var(--Moderate-violet);
+ width: 40px;
+}
+
+.text-strong {
+ font-size: 20px;
+ font-weight: 600;
+ margin: 20px auto;
+}
+
+.text-strong-j {
+ font-size: 21px;
+ font-weight: 600;
+ margin: 20px auto;
+}
+
+.text-opacity {
+ opacity: 70%;
+ line-height: 20px;
+ font-size: 14px;
+}
+
+@media (max-width: 375px) {
+
+ body {
+  width: 375px;
+  height: 1996px;
+  display: flex;
+  justify-content: center;
+  align-items: unset;
+ }
+
+ main {
+  width: 90%;
+  height: 97%;
+  display: flex;
+  flex-direction: column;
+  margin: 30px 0;
+ }
+
+ .box-daniel {
+  height: 24%;
+  background-position: 90% 0%;
+  background-size: 35%;
+ }
+
+ .box-jonathan {
+  height: 15%;
+ }
+
+ .box-jeanette {
+  height: 14%;
+ }
+
+ .box-patrick {
+  height: 21%;
+ }
+
+ .box-kira {
+  height: 26%;
+ }
+
+ .text-strong {
+  font-size: 18px;
+  margin: 15px auto;
+ }
+
+ .text-opacity {
+  font-size: 13px;
+ }
+}
